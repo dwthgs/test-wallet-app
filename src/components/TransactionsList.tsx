@@ -108,7 +108,7 @@ const TransactionsList: React.FC = () => {
       </h2>
       <div className="transactions-block">
         <div className="transactions-list-container">
-          {data.transactions.slice(0, 7).map((transaction) => (
+          {data.transactions.slice(0, 10).map((transaction) => (
             <div
               key={transaction.id}
               className="transaction-item"
