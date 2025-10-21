@@ -1,25 +1,25 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { 
-  faCreditCard, 
-  faHome, 
-  faBullseye, 
-  faGlobe, 
-  faCoffee, 
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCreditCard,
+  faHome,
+  faBullseye,
+  faGlobe,
+  faCoffee,
   faPlay,
   faCheck,
   faChevronRight,
-  faLaptop
-} from '@fortawesome/free-solid-svg-icons';
-import type { Transaction, WalletData } from '../types';
-import { formatTransactionDate } from '../utils/dateUtils';
-import { calculateDailyPoints, formatPoints } from '../utils/pointsCalculator';
-import walletDataRaw from '../data/transactions.json';
+  faLaptop,
+} from "@fortawesome/free-solid-svg-icons";
+import type { Transaction, WalletData } from "../types";
+import { formatTransactionDate } from "../utils/dateUtils";
+import { calculateDailyPoints, formatPoints } from "../utils/pointsCalculator";
+import walletDataRaw from "../data/transactions.json";
 
 const iconMap: { [key: string]: typeof faCreditCard } = {
   apple: faLaptop,
-  'credit-card': faCreditCard,
+  "credit-card": faCreditCard,
   home: faHome,
   bullseye: faBullseye,
   globe: faGlobe,
@@ -39,7 +39,15 @@ const TransactionsList: React.FC = () => {
   };
 
   const getRandomColor = () => {
-    const colors = ['#333', '#555', '#777', '#999', '#2c3e50', '#34495e', '#7f8c8d'];
+    const colors = [
+      "#333",
+      "#555",
+      "#777",
+      "#999",
+      "#2c3e50",
+      "#34495e",
+      "#7f8c8d",
+    ];
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
@@ -52,9 +60,15 @@ const TransactionsList: React.FC = () => {
           {/* Card Balance Block */}
           <div className="card-balance-block">
             <div className="balance-info">
-              <h2>Card Balance</h2>
-              <div className="balance-amount">${data.cardBalance.toFixed(2)}</div>
-              <div className="available-amount">${available.toFixed(2)} Available</div>
+              <h2 style={{ marginBottom: "0", marginTop: "0" }}>
+                Card Balance
+              </h2>
+              <div className="balance-amount">
+                ${data.cardBalance.toFixed(2)}
+              </div>
+              <div className="available-amount">
+                ${available.toFixed(2)} Available
+              </div>
             </div>
           </div>
 
@@ -64,11 +78,6 @@ const TransactionsList: React.FC = () => {
               <div>
                 <h3>Daily Points</h3>
                 <div className="points-amount">{formattedPoints}</div>
-              </div>
-              <div className="daily-points-check">
-                <div className="check-icon">
-                  <FontAwesomeIcon icon={faCheck} />
-                </div>
               </div>
             </div>
           </div>
@@ -87,18 +96,30 @@ const TransactionsList: React.FC = () => {
       </div>
 
       {/* Latest Transactions Block */}
+      <h2
+        style={{
+          paddingLeft: "8px",
+          marginBottom: "-10px",
+          fontSize: "20px",
+          fontWeight: "bold",
+        }}
+      >
+        Latest Transactions
+      </h2>
       <div className="transactions-block">
-        <h2>Latest Transactions</h2>
         <div className="transactions-list-container">
           {data.transactions.slice(0, 7).map((transaction) => (
-            <div 
-              key={transaction.id} 
+            <div
+              key={transaction.id}
               className="transaction-item"
               onClick={() => handleTransactionClick(transaction)}
             >
-              <div className="transaction-icon" style={{ backgroundColor: getRandomColor() }}>
-                <FontAwesomeIcon 
-                  icon={iconMap[transaction.icon] || faCreditCard} 
+              <div
+                className="transaction-icon"
+                style={{ backgroundColor: getRandomColor() }}
+              >
+                <FontAwesomeIcon
+                  icon={iconMap[transaction.icon] || faCreditCard}
                   color="white"
                 />
               </div>
@@ -106,12 +127,13 @@ const TransactionsList: React.FC = () => {
                 <div className="transaction-header">
                   <span className="transaction-name">{transaction.name}</span>
                   <span className="transaction-amount">
-                    {transaction.type === 'Payment' ? '+' : ''}${transaction.amount.toFixed(2)}
+                    {transaction.type === "Payment" ? "+" : ""}$
+                    {transaction.amount.toFixed(2)}
                   </span>
                 </div>
                 <div className="transaction-meta">
                   <span className="transaction-description">
-                    {transaction.isPending && 'Pending - '}
+                    {transaction.isPending && "Pending - "}
                     {transaction.description}
                   </span>
                   {transaction.cashbackPercentage && (
@@ -121,7 +143,8 @@ const TransactionsList: React.FC = () => {
                   )}
                 </div>
                 <div className="transaction-date">
-                  {transaction.authorizedUser && `${transaction.authorizedUser} — `}
+                  {transaction.authorizedUser &&
+                    `${transaction.authorizedUser} — `}
                   {formatTransactionDate(transaction.date)}
                 </div>
               </div>
