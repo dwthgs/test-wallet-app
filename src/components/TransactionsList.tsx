@@ -87,7 +87,7 @@ const TransactionsList: React.FC = () => {
         <div className="payment-due-block">
           <div>
             <h3>No Payment Due</h3>
-            <p>You've paid your September balance.</p>
+            <p>You've paid your balance.</p>
           </div>
           <div className="check-icon">
             <FontAwesomeIcon icon={faCheck} />
