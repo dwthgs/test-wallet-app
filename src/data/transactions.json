@@ -1,0 +1,126 @@
+{
+  "cardBalance": 17.30,
+  "cardLimit": 1500,
+  "transactions": [
+    {
+      "id": "1",
+      "type": "Credit",
+      "amount": 14.06,
+      "name": "Apple",
+      "description": "Card Number Used",
+      "date": "2022-09-22",
+      "isPending": true,
+      "authorizedUser": "Diana",
+      "icon": "apple",
+      "cashbackPercentage": 3
+    },
+    {
+      "id": "2",
+      "type": "Payment",
+      "amount": 174.00,
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank Natio...",
+      "date": "2022-09-20",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "credit-card",
+      "cashbackPercentage": null
+    },
+    {
+      "id": "3",
+      "type": "Credit",
+      "amount": 3.24,
+      "name": "Apple",
+      "description": "Card Number Used",
+      "date": "2022-09-20",
+      "isPending": false,
+      "authorizedUser": "Diana",
+      "icon": "apple",
+      "cashbackPercentage": 3
+    },
+    {
+      "id": "4",
+      "type": "Payment",
+      "amount": 99.71,
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank Natio...",
+      "date": "2022-09-17",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "credit-card",
+      "cashbackPercentage": null
+    },
+    {
+      "id": "5",
+      "type": "Payment",
+      "amount": 73.58,
+      "name": "Payment",
+      "description": "From JPMorgan Chase Bank Natio...",
+      "date": "2022-09-19",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "credit-card",
+      "cashbackPercentage": null
+    },
+    {
+      "id": "6",
+      "type": "Credit",
+      "amount": 21.61,
+      "name": "IKEA",
+      "description": "Round Rock, TX",
+      "date": "2022-10-01",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "home",
+      "cashbackPercentage": 2
+    },
+    {
+      "id": "7",
+      "type": "Credit",
+      "amount": 73.58,
+      "name": "Target",
+      "description": "Cedar Park, TX",
+      "date": "2022-09-15",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "bullseye",
+      "cashbackPercentage": 2
+    },
+    {
+      "id": "8",
+      "type": "Credit",
+      "amount": 7.50,
+      "name": "Airalo",
+      "description": "RBC Bank Debit Card",
+      "date": "2022-05-26",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "globe",
+      "cashbackPercentage": 1
+    },
+    {
+      "id": "9",
+      "type": "Credit",
+      "amount": 45.20,
+      "name": "Starbucks",
+      "description": "Austin, TX",
+      "date": "2022-09-18",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "coffee",
+      "cashbackPercentage": 1
+    },
+    {
+      "id": "10",
+      "type": "Credit",
+      "amount": 12.99,
+      "name": "Netflix",
+      "description": "Monthly Subscription",
+      "date": "2022-09-16",
+      "isPending": false,
+      "authorizedUser": null,
+      "icon": "play",
+      "cashbackPercentage": 1
+    }
+  ]
+}
